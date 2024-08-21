@@ -1,0 +1,42 @@
+{
+  "name": "2324fsip-gelatogallery-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "devlop": "tsc && vite",
+    "build": "tsc && vite build",
+    "lintbuild": "prettier . --write && tsc && vite build",
+    "preview": "vite preview",
+    "lint:scripts": "eslint . --ext .ts",
+    "lint:styles": "stylelint ./**/*.{css,scss}",
+    "lint": "npm run lint:scripts && npm run lint:styles",
+    "format:scripts": "prettier . --write",
+    "format:styles": "stylelint ./**/*.{css,scss} --fix",
+    "format": "npm run format:scripts && npm run format:styles"
+  },
+  "devDependencies": {
+    "@types/jwt-decode": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "jwt-decode": "^4.0.0",
+    "prettier": "^3.1.1",
+    "prettier-eslint": "^16.2.0",
+    "sass": "^1.69.5",
+    "stylelint": "^15.11.0",
+    "stylelint-config-property-sort-order-smacss": "^9.1.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.11",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-stylelint": "^5.2.1"
+  },
+  "dependencies": {
+    "glob": "^10.3.10"
+  }
+}

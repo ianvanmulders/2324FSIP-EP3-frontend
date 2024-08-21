@@ -10,6 +10,7 @@ export interface Task extends IdNameObject {
 }
 
 export type Role = "worker" | "owner"
+
 export interface JWTResponse {
   accessToken: string
   message: string | null

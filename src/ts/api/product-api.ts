@@ -1,7 +1,7 @@
 // Filename: product-api.ts
 
 import { Product } from "../types"
-import { myFetch } from "../utils/my-fetch"
+import { myFetch } from "../utils/my-fetch.ts"
 
 export const getProtected = async (): Promise<Product[]> => {
   const response = await myFetch(`http://localhost:8080/products`)

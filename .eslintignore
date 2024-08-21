@@ -1,0 +1,13 @@
+vite.config.js
+
+# Ignore all files in the node_modules directory
+node_modules/
+
+# Ignore all JavaScript files in the build directory
+build/**/*.js
+
+# Ignore specific file or directory
+dist/
+
+# Ignore all html files
+**/*.html

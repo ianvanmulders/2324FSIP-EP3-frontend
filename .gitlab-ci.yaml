@@ -1,0 +1,33 @@
+stages:
+  - deploy
+
+build_and_deploy:
+  image: node:21-bookworm-slim
+  stage: deploy
+  script:
+    # Feel free to add shell commands here to execute in the runner
+    - pnpm install
+    - pnpm format:scripts
+    - pnpm build
+    # SCP command to copy the dist folder to the webserver
+    - scp -o StrictHostKeyChecking=no -r dist/* $SSH_USERNAME@cloudplesk.ikdoeict.be:gelato.dietersenesael.ikdoeict.be/
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - node_modules/
+      - .pnpm-store
+  before_script:
+    # Enable pnpm
+    - corepack enable
+    - corepack prepare pnpm@latest-8 --activate
+    - pnpm config set store-dir .pnpm-store
+
+    # Copy the SSH key to the GitLab Runner
+    - "command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )"
+    - eval $(ssh-agent -s)
+    - chmod 400 "$SSH_PRIVATE_KEY"
+    - ssh-add "$SSH_PRIVATE_KEY"
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh

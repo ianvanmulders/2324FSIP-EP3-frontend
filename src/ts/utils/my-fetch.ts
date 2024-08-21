@@ -5,7 +5,7 @@ import {
   refreshAccessToken,
   verifyAccessToken,
   logout,
-} from "./auth"
+} from "./auth.ts"
 
 export const myPostFetch = async (
   url: RequestInfo | string,

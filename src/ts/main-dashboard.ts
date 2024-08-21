@@ -304,6 +304,7 @@ testButtonAddEvent.addEventListener("click", () => {
 const testButtonAddProducts = document.querySelector("#addProduct")
 testButtonAddProducts.addEventListener("click", () => {
   const errorsProduct = []
+  const errorContainer = document.querySelector(".error-container-product")
   const productName = (
     document.getElementById("productName") as HTMLInputElement
   ).value
@@ -322,9 +323,6 @@ testButtonAddProducts.addEventListener("click", () => {
 
   const inputFiles = document.getElementById("productImage") as HTMLInputElement
   const selectedFile = inputFiles.files[0]
-  console.log(selectedFile.name)
-  console.log(selectedFile.webkitRelativePath)
-  console.log(selectedFile.type)
 
   const productCategory = document.getElementById(
     "productType",
@@ -338,8 +336,7 @@ testButtonAddProducts.addEventListener("click", () => {
 
   if (productName.trim() === "") {
     errorsProduct.push("Please fill in a name")
-  }
-  if (productName.length < 3) {
+  } else if (productName.length < 3) {
     errorsProduct.push("Name must at least have 3 characters")
   }
   if (productFlavour.trim() === "") {
@@ -355,42 +352,52 @@ testButtonAddProducts.addEventListener("click", () => {
     errorsProduct.push("You didnt select a valid option")
   }
 
-  const productData = new FormData()
-  productData.append("name", productName)
-  productData.append("flavour", productFlavour)
-  productData.append("description", productDescription)
-  productData.append("price", productPrice)
-  productData.append("stock", productStock)
-  productData.append("image", selectedFile)
-  const selectedValue = productCategory.value
-  switch (selectedValue) {
-    case "sorbet":
-      productData.append("category_id", "1")
-      break
-    case "artisanal":
-      productData.append("category_id", "2")
-
-      break
-    case "alcohol":
-      productData.append("category_id", "3")
-      break
-    default:
-      errorsProduct.push("You didnt select a valid category")
-  }
-
-  if (productCake) {
-    productData.append("is_cake", "1")
+  if (errorsProduct.length > 0) {
+    errorContainer.textContent = ""
+    errorsProduct.forEach((error: string) => {
+      const aLink = document.createElement("a")
+      aLink.textContent = error
+      errorContainer.append(aLink)
+    })
   } else {
-    productData.append("is_cake", "0")
+    const productData = new FormData()
+    productData.append("name", productName)
+    productData.append("flavour", productFlavour)
+    productData.append("description", productDescription)
+    productData.append("price", productPrice)
+    productData.append("stock", productStock)
+    productData.append("image", selectedFile)
+    const selectedValue = productCategory.value
+    switch (selectedValue) {
+      case "sorbet":
+        productData.append("category_id", "1")
+        break
+      case "artisanal":
+        productData.append("category_id", "2")
+
+        break
+      case "alcohol":
+        productData.append("category_id", "3")
+        break
+      default:
+        errorsProduct.push("You didnt select a valid category")
+    }
+
+    if (productCake) {
+      productData.append("is_cake", "1")
+    } else {
+      productData.append("is_cake", "0")
+    }
+
+    console.log(productData)
+    product(productData)
+      .then(() => {
+        console.log("Product added successfully")
+      })
+      .catch((error) => {
+        console.error("Failed to add product:", error)
+      })
   }
-  console.log(productData)
-  product(productData)
-    .then(() => {
-      console.log("Product added successfully")
-    })
-    .catch((error) => {
-      console.error("Failed to add product:", error)
-    })
 })
 
 const testButtonAddPopup = document.querySelector("#addPopup")

@@ -1,5 +1,5 @@
 // Filename: logout.ts
 
-import { logout } from "./auth"
+import { logout } from "./auth.ts"
 
 logout()

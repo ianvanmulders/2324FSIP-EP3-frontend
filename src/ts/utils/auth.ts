@@ -54,6 +54,7 @@ export const refreshAccessToken = async (): Promise<void> => {
 
 // Check if the user has a specific role based on the decoded token.
 export const hasRole = (role: Role): boolean => {
+  console.log("testRoles")
   const decoded = verifyAccessToken()
   const { roles } = decoded || {}
   return Boolean(roles?.includes(role))
@@ -61,37 +62,59 @@ export const hasRole = (role: Role): boolean => {
 
 // Save the received access token to local storage.
 const setAccessToken = (data: JWTResponse): void => {
+  console.log("data")
   localStorage.setItem("accessToken", data.accessToken)
 }
 
 // Handle the user login process.
-export const login = async (formData: FormData): Promise<void> => {
-  try {
-    const response = await fetch(
-      `https://apiGelato.dietersenesael.ikdoeict.be/api/login`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-        },
-        body: JSON.stringify({
-          email: formData.get("email"),
-          password: formData.get("password"),
-        }),
-        credentials: "include",
-      },
-    )
+// export const login = async (formData: FormData): Promise<void> => {
+//   try {
+//     const response = await fetch(`http://localhost:8080/api/login`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json; charset=utf-8",
+//       },
+//       body: JSON.stringify({
+//         email: formData.get("email"),
+//         password: formData.get("password"),
+//       }),
+//       credentials: "include",
+//     })
+//
+//     if (!response.ok) {
+//       throw new Error(`Login failed: ${response.statusText}`)
+//     }
+//
+//     const data: JWTResponse = (await response.json()) as JWTResponse
+//     setAccessToken(data)
+//     console.log("data: ", getAccessToken())
+//   } catch (error) {
+//     console.error("Login error:", error)
+//   }
+// }
 
-    if (!response.ok) {
-      throw new Error(`Login failed: ${response.statusText}`)
-    }
-
-    const data: JWTResponse = (await response.json()) as JWTResponse
-    setAccessToken(data)
-    console.log("data: ", getAccessToken())
-  } catch (error) {
-    console.error("Login error:", error)
+export const login = async (): Promise<void> => {
+  const data = {
+    email: "test@test.com",
+    password: "testpassword",
   }
+  console.log(data)
+  await fetch("http://localhost:8080/api/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((response) => {
+      if (response.status === 201) {
+        console.log("Popup was made successfully")
+      } else {
+        console.log("Popup was not made successfully")
+      }
+      console.log("Contact made: ", response)
+    })
+    .catch((err) => console.log(err))
 }
 
 // Clear the access token from local storage, effectively logging out the user.

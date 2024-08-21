@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.update-product button {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.add-event button, .add-product button, .add-popup button {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: var(--framboise-color);
+}
+
+.card button:hover {
+  background-color: unset;
+  color: unset;
+}
+
+.make-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: unset;
+  padding: 2rem;
+  background-color: var(--framboise-color);
+}
+
+.intro {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.button-popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: #0f1f2f;
+  color: #f1f2f3;
+}
+
+.button-popup:hover {
+  background-color: var(--white-to-black);
+  color: var(--black-to-white);
+  cursor: pointer;
+}
+
+.remove {
+  border: 1px solid red;
+  color: red;
+}
+
+.remove:hover {
+  border: 1px solid black;
+  background-color: red;
+  color: black;
+}
+
+footer {
+  padding: 2rem;
+}
+
+.active {
+  display: block;
+}
+
+.add {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.test-data {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.show-products h1, .show-events h1 {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.popups, .events, .products {
+  display: none;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--black-to-white);
+  border-radius: 1rem;
+  background-color: var(--white-to-black);
+  color: var(--black-to-white);
+}
+
+.products h1, .popups h1, .events h1 {
+  margin: 1rem 2rem;
+}
+
+.add-product, .add-event, .add-popup {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  max-width: 15rem;
+  margin: 0 2rem;
+}
+
+.add-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.add-buttons h2 {
+  margin: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.button-add-event, .button-add-popup, .button-add-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  border: 1px solid var(--black-to-white);
+  border-radius: 1rem;
+  background-color: var(--framboise-color);
+}
+
+.button-add-event:focus-visible, .button-add-event:hover,
+.button-add-popup:focus-visible, .button-add-popup:hover,
+.button-add-product:focus-visible, .button-add-product:hover {
+  background-color: var(--strawberry-color);
+  color: var(--black-to-black);
+}
+
+.show-products, .show-events {
+  margin: 2rem 0;
+  color: var(--black-to-white);
+}
+
+.div-product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: var(--black-to-white) solid 1px;
+}
+
+.div-info {
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.div-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.event {
+  padding: 1rem;
+  border: 1px solid var(--black-to-white);
+}
+
+#button-edit, #button-delete {
+  display: flex;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+#button-edit {
+  background-color: var(--mint-color);
+  color: var(--black);
+}
+
+#button-delete {
+  background-color: #FF6961;
+  color: var(--black);
+}
+
+#button-edit:hover, #button-edit:focus-visible {
+  background-color: var(--black-to-white);
+  color: var(--white-to-black);
+  cursor: pointer;
+}
+
+#button-delete:hover, #button-delete:focus-visible {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.data-update-product {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.update-product {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 20rem;
+  margin: 2rem;
+  padding: 2rem;
+  transform: translate(-50%, -50%);
+  border: 1px solid var(--black-to-white);
+  border-radius: 1rem;
+  background-color: var(--white-to-black);
+
+}
+
+.update-product button:hover, .update-product:focus-visible {
+  background-color: var(--strawberry-color);
+  color: var(--background-main);
+}
+
+.radiobutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 2rem;
+}
+
+input[type="text"], input[type="file"] {
+  margin-bottom: 0.5rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+.error-container-event, .error-container-product, .error-container-popup {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.error-container a {
+  color: var(--black-to-white);
+}
+
+@media (width <= 40.625em) {
+  .buttons {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}
+

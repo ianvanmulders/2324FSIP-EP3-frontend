@@ -1,0 +1,75 @@
+body {
+  background-color: var(--background-main);
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 0 2rem 2rem;
+  padding-top: 2rem;
+  font-size: 3rem;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.event-period {
+  margin: 1rem;
+  list-style-type: none;
+}
+
+.event-period a {
+  position: relative;
+  padding-bottom: 0.2rem;
+  transition: border-bottom 1s ease-in-out;
+  border-bottom: 1px solid black;
+  color: black;
+  text-decoration: none;
+}
+
+.event-period a::before,
+.event-period a::after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  left: 0;
+  height: 0.1rem;
+  transition: right 0.3s ease-in-out;
+  background-color: var(--black-to-white);
+}
+
+.event-period a::after {
+  right: 0;
+  left: 100%;
+}
+
+.event-period a:hover::before,
+.event-period a:hover::after {
+  right: 0;
+}
+
+.underline {
+  width: 15%;
+  height: 1px;
+  background-color: var(--black-to-white);
+}
+
+.div-event {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 1rem;
+}
+
+.header-month {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.div-month {
+  margin: 0 2rem;
+}

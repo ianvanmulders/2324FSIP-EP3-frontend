@@ -1,0 +1,85 @@
+:root {
+  --background-main: #c6def1;
+}
+
+.sorbet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: 8px 8px 18px #7c7b7b;
+}
+
+.sorbet img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.explanation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--intro);
+}
+
+.explanation h1 {
+  margin: 2rem;
+  font-size: 3rem;
+}
+
+.explanation p {
+  margin: 2rem;
+}
+
+.sorbet .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: #f1f1f1;
+}
+
+.others {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: var(--intro);
+}
+
+.others h1 {
+  font-size: 2rem;
+}
+
+.links {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+.links a:focus-visible,
+.links a:hover {
+  background-color: var(--framboise-color);
+}
+
+.ice-sorbet {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.div-ice-cream {
+margin: 2rem;
+}

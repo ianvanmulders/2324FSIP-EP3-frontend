@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/home.scss">
+    <script type="module" src="./ts/main.ts"></script>
+    <script type="module" src="./ts/home.ts"></script>
+    <title>Home</title>
+</head>
+<body>
+<header>
+    <a class="skip-link" href="#main-content">Skip navigation, go to main</a>
+    <nav>
+        <a href="#"><img src="./img/logo.png" alt="Name of the store"></a>
+        <ul class="nav-menu">
+            <li><a href="./">Home</a></li>
+            <li><a href="/ice/">Ice</a></li>
+            <li><a href="/cakes/">Cakes</a></li>
+            <li><a href="/order/">Order</a></li>
+            <li><a href="/calender/">Calender</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/login/">Login</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+<main id="main-content">
+    <section class="intro">
+        <img src="./img/home.jpg" alt="ice cream">
+        <div class="text">
+            <h1 class="title-home">Gelato Gallery</h1>
+            <p>
+                <span>Welcome to our Website.</span> <br>On this website you can
+                buy liter dozens of ice cream and some of the pretties and most
+                delicious ice cakes.
+            </p>
+            <br>
+            <span>Organising an event?</span>
+            <p>
+                You can book our ice cream truck and order the flavors of ice cream
+                that you want.
+            </p>
+            <p>Don't bother to ask questions to us, and we will see you later.</p>
+        </div>
+    </section>
+    <section class="popups" id="popups"></section>
+    <section class="cakes">
+        <h1 class="title-home">Ice Cakes</h1>
+        <div class="cards">
+            <div class="card" id="mint">
+                <img src="./img/ice-removebg-preview.png" alt="ice">
+                <h2 class="name">Mint</h2>
+                <p class="tags">Ice Cake</p>
+                <button>Read more...</button>
+            </div>
+            <div class="card" id="framboise">
+                <img src="./img/ice-removebg-preview.png" alt="ice">
+                <h2 class="name">Framboise</h2>
+                <p class="tags">Ice Cake</p>
+                <button>Read more...</button>
+            </div>
+            <div class="card" id="banana">
+                <img src="./img/ice-removebg-preview.png" alt="ice">
+                <h2 class="name">Banana</h2>
+                <p class="tags">Ice Cake</p>
+                <button>Read more...</button>
+            </div>
+        </div>
+    </section>
+    <section class="ice">
+        <h1 class="title-home">Popular ice boxes</h1>
+        <div class="cards">
+            <div class="card" id="chocolate">
+                <img src="./img/ice-removebg-preview.png" alt="ice">
+                <h2 class="name">Chocolate</h2>
+                <p class="tags">Artisanal ice cream</p>
+                <button>Read more...</button>
+            </div>
+            <div class="card" id="strawberry">
+                <img src="./img/ice-removebg-preview.png" alt="ice">
+                <h2 class="name">Strawberry</h2>
+                <p class="tags">Sorbet</p>
+                <button>Read more...</button>
+            </div>
+            <div class="card" id="limoncello">
+                <img src="./img/ice-removebg-preview.png" alt="ice">
+                <h2 class="name">Limoncello</h2>
+                <p class="tags">Alocholic ice cream</p>
+                <button>Read more...</button>
+            </div>
+        </div>
+    </section>
+    <section class="ice-truck">
+        <img src="./img/truck.jpg" alt="Ice Cream Truck">
+        <div class="truck-info">
+            <h1 class="title-home">Order our ice truck</h1>
+            <p>Want to order our ice truck</p>
+            <p>Press here!</p>
+            <button>Order me!</button>
+        </div>
+    </section>
+    <section class="us">
+        <h1>Who are we?</h1>
+        <div class="persons">
+            <div class="person">
+                <img src="./img/person.png" alt="This is Emily">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non
+                    lacinia nunc. Etiam neque tortor, mattis quis ligula quis,
+                    bibendum vulputate diam. Sed sodales fringilla nunc gravida
+                    fringilla. Aenean pretium eget elit vitae posuere.
+                </p>
+            </div>
+            <div class="person">
+                <img src="./img/person.png" alt="This is John">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non
+                    lacinia nunc. Etiam neque tortor, mattis quis ligula quis,
+                    bibendum vulputate diam. Sed sodales fringilla nunc gravida
+                    fringilla. Aenean pretium eget elit vitae posuere.
+                </p>
+            </div>
+            <div class="person">
+                <img src="./img/person.png" alt="This is Jeff">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non
+                    lacinia nunc. Etiam neque tortor, mattis quis ligula quis,
+                    bibendum vulputate diam. Sed sodales fringilla nunc gravida
+                    fringilla. Aenean pretium eget elit vitae posuere.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <div class="info">
+        <section class="opening">
+            <h1>Opening hours</h1>
+            <div class="text">
+                <p>Monday: 9u-12, 13u-20u</p>
+                <p>Tuesday: 13u-18u</p>
+                <p>Wednesday: 11u-12u30, 13u-18u</p>
+                <p>Thursday: 13u-18u</p>
+                <p>Friday: 13u-18u</p>
+                <p>Saturday: 13u-18u</p>
+                <p>Sunday: 13u-18u</p>
+            </div>
+        </section>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <div class="text">
+                <p>Gelato Gallery</p>
+                <p>Somewhere in Belgium</p>
+                <a href="">gelatoGallery@outlook.com</a>
+                <p>+32 488 68 48 87</p>
+                <p>BE 489453216</p>
+            </div>
+        </section>
+    </div>
+    <div class="line"></div>
+    <p class="copyright">
+        This website was made by Gelato Gallery © copyright
+    </p>
+</footer>
+</body>
+</html>

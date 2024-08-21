@@ -1,0 +1,103 @@
+$color-1: black;
+$color-2: var(--black-to-black);
+$color-3: var(--black-to-white);
+$color-4: white;
+$color-5: var(--black);
+$color-6: var(--white-to-black);
+$font-family-1: arial, sans-serif;
+$background-color-1: var(--background-main);
+$background-color-2: black;
+$background-color-3: #f2c6de;
+$background-color-4: var(--white-to-black);
+$background-color-5: var(--intro);
+$background-color-6: lightseagreen;
+$background-color-7: var(--mint-color);
+$background-color-8: var(--framboise-color);
+$background-color-9: var(--banana-color);
+$background-color-10: var(--chocolate-color);
+$background-color-11: var(--strawberry-color);
+$background-color-12: var(--limoncello-color);
+$background-color-13: var(--black-to-white);
+
+/* main */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family-1;
+}
+
+main {
+  margin: 0 auto;
+  background-color: $background-color-1;
+}
+
+.title-home {
+  margin: 2rem;
+  font-size: 5rem;
+}
+
+/* ... (rest of your styles) */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black: #000;
+    --background-main: #000;
+    --black-to-white: #f1f2f3;
+    --white-to-black: #000;
+    --black-to-black: #000;
+  }
+}
+
+@media (width <= 75em) {
+  .intro {
+    display: flex;
+
+    img {
+      display: flex;
+      transition: opacity 2s ease-in-out;
+    }
+  }
+}
+
+@media (width >= 70.625em) {
+  .intro {
+    display: flex;
+
+    img {
+      display: flex;
+      margin: 2rem 0;
+      transition: opacity 2s ease-in-out;
+    }
+  }
+}
+
+@media (width <= 40.625em) {
+  .hamburger {
+    display: block;
+    margin: auto 2rem;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .ice-truck {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
+
+@media (width >= 40.625em) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+  }
+}

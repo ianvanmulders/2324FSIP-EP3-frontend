@@ -1,0 +1,67 @@
+:root {
+  --buttons: #9fdfbf;
+  --hover: #f18d94;
+  --black: #000;
+  --white: #f1f2f3;
+}
+
+main {
+  padding-bottom: 2rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 0 2rem 2rem;
+  padding-top: 2rem;
+  font-size: 3rem;
+}
+
+.ices {
+  display: flex;
+  flex-direction: column;
+}
+
+.ice {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  margin: 1rem;
+}
+
+.ice a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid var(--black-to-white);
+  border-radius: 1rem;
+  background-color: var(--buttons);
+  color: var(--black);
+  text-decoration: none;
+}
+
+main a:focus-visible,
+main a:hover {
+  background-color: var(--hover);
+  color: var(--black-to-white);
+}
+
+.ices > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ice img {
+  width: 100%;
+  height: auto;
+}
+
+.ices img {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}

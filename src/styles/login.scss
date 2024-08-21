@@ -1,0 +1,108 @@
+$color-1: black;
+$color-2: #f1f2f3;
+$color-3: white;
+$background-color-1: #f1f2f3;
+$background-color-2: black;
+$background-color-3: blue;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: auto 0;
+  background-image: url("../img/login_background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.login {
+  margin: auto 0;
+  padding: 2rem;
+  border: 1px solid black;
+  backdrop-filter: blur(15px);
+  border-radius: 1rem;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  a {
+    color: $color-1;
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+    margin: 0.25rem;
+    padding: 0.5rem 2rem;
+    border: 1px solid black;
+    border-radius: 1rem;
+    background-color: $background-color-1;
+
+    &:hover {
+      transition: 0.3s ease-in-out;
+      background-color: $background-color-2;
+      color: $color-2;
+    }
+  }
+
+  input[type="submit"] {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--strawberry-color);
+    color: $color-3;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0;
+  }
+
+  input[type="password"] {
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0;
+  }
+
+  .show {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0.5rem;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+}
+
+.sign-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+input {
+  border-radius: 0.25rem;
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/home.scss">
+    <link rel="stylesheet" href="../styles/login.scss">
+    <script type="module" src="../ts/login.ts"></script>
+    <script type="module" src="../ts/home.ts"></script>
+    <title>Login</title>
+</head>
+<body>
+<header></header>
+<main id="main">
+    <section class="login">
+        <h1>Login</h1>
+        <form action="" id="login">
+            <div class="fields">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <div class="show">
+                    <label for="showPassword"> Show Password</label>
+                    <input type="checkbox" id="showPassword">
+                </div>
+            </div>
+            <div class="sign-in">
+                <button>Sign in with Google</button>
+                <button>Sign in with Apple</button>
+            </div>
+            <div class="login-button">
+                <a href="">Forgot password?</a>
+                <input type="submit" value="login">
+            </div>
+        </form>
+    </section>
+</main>
+<footer>
+</footer>
+</body>
+</html>

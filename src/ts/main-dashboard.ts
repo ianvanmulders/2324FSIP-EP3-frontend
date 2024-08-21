@@ -321,9 +321,6 @@ testButtonAddProducts.addEventListener("click", () => {
     document.getElementById("productStock") as HTMLInputElement
   ).value
 
-  const inputFiles = document.getElementById("productImage") as HTMLInputElement
-  const selectedFile = inputFiles.files[0]
-
   const productCategory = document.getElementById(
     "productType",
   ) as HTMLSelectElement
@@ -366,7 +363,6 @@ testButtonAddProducts.addEventListener("click", () => {
     productData.append("description", productDescription)
     productData.append("price", productPrice)
     productData.append("stock", productStock)
-    productData.append("image", selectedFile)
     const selectedValue = productCategory.value
     switch (selectedValue) {
       case "sorbet":
